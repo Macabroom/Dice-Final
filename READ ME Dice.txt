@@ -1,0 +1,2 @@
+This is a dice program. A number from 1 to 10 is randomly selected as the number of times the dice is rolled(which is the first number on the console). Then the average will be displayed after every roll. 
+Have fun@

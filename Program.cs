@@ -49,20 +49,20 @@ namespace Problem2
             // Makes six dice rolls and prints them onto the console.
             public void Start()
             {
-                int number_of_rolls = 0;
+                int number_Of_rolls = 0;
                 Random rand = new Random();
                 int random_int = rand.Next(1, 11);
                 Console.Write("Rolls = ");
                 Console.WriteLine(random_int);
-                number_of_rolls = random_int;
+                number_Of_rolls = random_int;
                 List<int> diceResults = new List<int>();
 
-                while (number_of_rolls > 0)
+                while (number_Of_rolls > 0)
                 {
-                    int dice_number = rand.Next(1, 7);
-                    Console.WriteLine(dice_number);
-                    diceResults.Add(dice_number);
-                    number_of_rolls = number_of_rolls - 1;
+                    int dice_Number = rand.Next(1, 7);
+                    Console.WriteLine(dice_Number);
+                    diceResults.Add(dice_Number);
+                    number_Of_rolls = number_Of_rolls - 1;
                 }
                 //Finds the average of the dice rolls and prints it onto the console.
                 var List = diceResults.Average();

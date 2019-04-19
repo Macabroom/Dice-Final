@@ -17,23 +17,25 @@ namespace Problem2
 
             // Run program for the first time.
             Dice roll = new Dice();
-            roll.Man();
-
+            roll.Start();
+            
 
             while (continueRunning)
             {
                 // Prompt user if they want to roll again.
-                Console.WriteLine("Do you want to roll again? Y/N");
+                Console.Write("Do you want to roll again? y/n" + " ");
                 ConsoleKeyInfo info = Console.ReadKey();
+                Console.WriteLine();
                 if (info.KeyChar == 'y') // User selected yes.
                 {
                     Dice die = new Dice();
-                    roll.Man();
+                    roll.Start();
                 }
                 if (info.KeyChar == 'n') // User selected no.
                 {
                     continueRunning = false;
                     Console.WriteLine("Thank you for rolling.");
+                    Console.WriteLine("Press the Enter key to exit.");
                     Console.ReadLine();
                 }
 
@@ -44,29 +46,30 @@ namespace Problem2
         // Main program found here.
         class Dice
         {
-            public void Dog() { }
-
             // Makes six dice rolls and prints them onto the console.
-            public void Man()
+            public void Start()
             {
                 int number_of_rolls = 0;
                 Random rand = new Random();
                 int random_int = rand.Next(1, 11);
+                Console.Write("Rolls = ");
                 Console.WriteLine(random_int);
                 number_of_rolls = random_int;
-                List<int> list = new List<int>();
+                List<int> diceResults = new List<int>();
 
                 while (number_of_rolls > 0)
                 {
                     int dice_number = rand.Next(1, 7);
                     Console.WriteLine(dice_number);
-                    list.Add(dice_number);
+                    diceResults.Add(dice_number);
                     number_of_rolls = number_of_rolls - 1;
                 }
-                var List = list.Average();
-                Console.WriteLine(List);
+                //Finds the average of the dice rolls and prints it onto the console.
+                var List = diceResults.Average();
+                Console.WriteLine();
+                Console.WriteLine("Average: " +List);
                 Console.ReadLine();
-
+                
 
 
 

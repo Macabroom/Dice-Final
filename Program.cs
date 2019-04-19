@@ -51,10 +51,10 @@ namespace Problem2
             {
                 int number_Of_rolls = 0;
                 Random rand = new Random();
-                int random_int = rand.Next(1, 11);
+                int random_Int = rand.Next(1, 11);
                 Console.Write("Rolls = ");
-                Console.WriteLine(random_int);
-                number_Of_rolls = random_int;
+                Console.WriteLine(random_Int);
+                number_Of_rolls = random_Int;
                 List<int> diceResults = new List<int>();
 
                 while (number_Of_rolls > 0)
